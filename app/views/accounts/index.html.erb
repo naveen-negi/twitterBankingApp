@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "/WEB/INF/xhtml1-strict.dtd">
+<!-- saved from url=(0107)https://ibank.dummybank.com/nfs/ibank/account_overview.htm?r=C97F911C-D938-8F93-EA84-F0C919E762FD -->
+<html style="display: block;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="CACHE-CONTROL" content="NO-STORE"> <meta http-equiv="PRAGMA" content="NO-CACHE"> <meta http-equiv="EXPIRES" Dummy Online Banking </title> <%= stylesheet_link_tag "style.css", media: "all" %> <style type="text/css"></style></head> <body onload="showPrintLink();startSessionTimer(&#39;420&#39;);processLinks();"> <table cellpadding="0" cellspacing="0"> <tbody><tr> <td align="left"> <table class="tbl_layout" cellpadding="0" cellspacing="0"> <colgroup> <col width="1%"> <col width="98%"> <col width="1%"> </colgroup> <tbody><tr> <td rowspan="3">&nbsp;</td> <td>                                                   <br> <table class="tbl_heading" cellpadding="0" cellspacing="0"> <colgroup> <col width="15%"> <col width="35%"> <col width="36%"> <col width="4%"> <col width="5%"> <col width="5%"> </colgroup> <tbody><tr> <td rowspan="2"> <%= image_tag "logo.png" %> </td> <td>&nbsp;</td> <td rowspan="2" colspan="6" class="txt_heading_right">  <span class="txt_mainheading"> Online Banking </span> </td> </tr> <tr> <td rowspan="2"> <span class="txt_bottom txt_subheading"> Australia </span> </td> </tr> </tbody></table> <br> <table class="tbl_heading" cellpadding="0" cellspacing="0"> <colgroup> <col width="70%"> <col width="20%"> <col width="2%"> <col width="2%"> <col width="3%"> <col width="3%"> </colgroup> <tbody><tr class="tbl_form_row_even"> <td class="tbl_sprt_right txt_highlight_left" id="dateLabel"> <span id="nameLabel"> You are logged in as:
+    </span>  <span id="nameTag"> <b> <%= @user.name %> </b> </span>  </td> <td class="tbl_sprt_right txt_highlight_right" id="dateLabel">   </td>    <td class="tbl_sprt_right tbl_content_right" id="linkLabel">    <a href="#" title="Home"> </a>   </td> <td class="tbl_sprt_right tbl_content_right" id="linkLabel"> <a href="#" title="Frequently Asked Questions"> </a> </td> <td class="tbl_sprt_right tbl_content_right" id="linkLabel"> </td>      <td class="tbl_content_top_right"><%= link_to('Logout', destroy_user_session_path) %> </span> </td>    </tr> </tbody></table> <br>
+ </td> <td rowspan="3">&nbsp;</td> </tr> <tr> <td> <br> <table cellpadding="0" cellspacing="0"> <colgroup>     <col width="20%"> <col width="80%">   </colgroup> <tbody><tr> <td class="tbl_header">                                                 <script>
+var cardAvail = false;
+var loanAvail = false;
+
+		cardAvail = false;
+		//
+		loanAvail = false;
+		//
+
+var loadingURL = 'https://forms.online.dummybank.com/public_website/australia/r5paperdrop/common/error.html';
+var formBaseURL = 'https://forms.online.dummybank.com/public_website/australia/r5paperdrop/common/index.html';
+var formErrorURL = 'https://forms.online.dummybank.com/public_website/australia/r5paperdrop/common/loading.html';
+
+var appLabelMap = new Object();
+
+appLabelMap.topupLoan = 'Top-up of Personal Loan';
+appLabelMap.creditLimitIncrease = 'Credit Limit Increase';
+appLabelMap.loanOnCards = 'Loan on Cards';
+appLabelMap.supplementaryCard = 'Supplementary Card';
+
+var appIdMap = new Object();
+appIdMap.topupLoan = 'AUD101';
+appIdMap.notAllCards = 'AUD99';
+appIdMap.allCards = 'AUD98';
+appIdMap.loanOnCards = 'AUD100';
+appIdMap.supplementaryCard = 'AUD97';
+
+
+</script>
+   <script type="text/javascript">
+		var menuParam = null;
+
+	</script><div id="parentMenu"><div id="parentMenuHeadLinkSelected"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>Overview</td></tr></tbody></table></a></div><div id="parentMenuHead"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>Accounts</td></tr></tbody></table></a></div><div id="parentMenuContent" style="display: none;"><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Accounts Summary</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Accounts Details</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Transaction History</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Cheque Status</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Verified By Visa</td></tr></tbody></table></a></div></div><div id="parentMenuHead"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>Open Term Deposit </td></tr></tbody></table></a></div><div id="parentMenuContent" style="display: none;"><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Resident / NRO Term Deposit</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;NRE Term Deposit </td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;2 - in - 1 Subsequent Deposit</td></tr></tbody></table></a></div></div><div id="parentMenuHead"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>Cards</td></tr></tbody></table></a></div><div id="parentMenuContent" style="display: none;"><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Cards Summary</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Cards Details</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Transaction History</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Kuch-Bhi-On-EMI </td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Online Rewards</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Visa IVR OTP</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;MasterCard IVR OTP</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Change Credit Card PIN </td></tr></tbody></table></a></div></div><div id="parentMenuHead"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>Investments &amp; Insurance</td></tr></tbody></table></a></div><div id="parentMenuContent" style="display: none;"><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;View  Statements</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;View Holdings Report</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Buy Insurance</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Customer Investment Profile</td></tr></tbody></table></a></div></div><div id="parentMenuHead"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>Loans</td></tr></tbody></table></a></div><div id="parentMenuContent" style="display: none;"><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Loans Summary</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Loans Details</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Transaction History</td></tr></tbody></table></a></div></div><div id="parentMenuHead"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>Global Link</td></tr></tbody></table></a></div><div id="parentMenuContent" style="display: none;"><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;View Accounts</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Add Accounts</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Delete Accounts</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Sort Accounts Order</td></tr></tbody></table></a></div></div><div class="hr_spacer">&nbsp;</div><hr><div class="hr_spacer">&nbsp;</div><div id="parentMenuHead"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>Payments</td></tr></tbody></table></a></div><div id="parentMenuContent" style="display: none;"><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;View &amp; Pay Bills</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;One Time Bill Payment</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Register for Bill Payment </td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Credit Cards Payment</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Scheduled Payments</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Payments History</td></tr></tbody></table></a></div></div><div id="parentMenuHead"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>Pre-Paid Mobile Top Up </td></tr></tbody></table></a></div><div id="parentMenuContent" style="display: none;"><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Pre-Paid Mobile Top Up</td></tr></tbody></table></a></div></div><div id="parentMenuHead"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>Transfers</td></tr></tbody></table></a></div><div id="parentMenuContent" style="display: none;"><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Overview</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Between Own Accounts</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Third Party Transfer</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Demand Draft</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Scheduled Transfers</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Transfers History</td></tr></tbody></table></a></div></div><div id="parentMenuHeadLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>Standing Instructions</td></tr></tbody></table></a></div><div class="hr_spacer">&nbsp;</div><hr><div class="hr_spacer">&nbsp;</div><div id="parentMenuHead"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>eStatements</td></tr></tbody></table></a></div><div id="parentMenuContent" style="display: none;"><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;About eStatements</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Manage Subscriptions</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;View eStatements</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Change eStatement Settings</td></tr></tbody></table></a></div></div><div id="parentMenuHead"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>Applications</td></tr></tbody></table></a></div><div id="parentMenuContent" style="display: none;"><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Applications Home</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;New Accounts</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Home Loans</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Personal Loans</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Preferred Banking</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Priority Banking</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Demat Accounts</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;NRI Services</td></tr></tbody></table></a></div></div><div id="parentMenuHeadLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>Rates</td></tr></tbody></table></a></div><div class="hr_spacer">&nbsp;</div><hr><div class="hr_spacer">&nbsp;</div><div id="parentMenuHead"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>Change Passwords</td></tr></tbody></table></a></div><div id="parentMenuContent" style="display: none;"><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Login Password</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Transaction Password</td></tr></tbody></table></a></div></div><div id="parentMenuHead"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>My Preferences</td></tr></tbody></table></a></div><div id="parentMenuContent" style="display: none;"><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Account Nickname</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Personal Details</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Funds Transfer Limit</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Beneficiary Limit</td></tr></tbody></table></a></div></div><div id="parentMenuHead"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>Service Requests</td></tr></tbody></table></a></div><div id="parentMenuContent" style="display: none;"><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Service Requests Overview</td></tr></tbody></table></a></div><div id="childMenu"><div id="childMenuHead"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>Banking Services</td></tr></tbody></table></a></div><div id="childMenuContent" style="display: none;"><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Cheque Book Request</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Stop Payment Instructions - &nbsp;&nbsp;&nbsp;Single Cheque</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Stop Payment Instructions - &nbsp;&nbsp;&nbsp;Cheque Series</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Deposit Renewal &nbsp;&nbsp;&nbsp;Instructions</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Deposit Breakage and &nbsp;&nbsp;&nbsp;Reissue</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Duplicate Deposit &nbsp;&nbsp;&nbsp;Certificate</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Change Of Pay Account</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Duplicate Statement &nbsp;&nbsp;&nbsp;Request</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Tax Related Certificate &nbsp;&nbsp;&nbsp;Request</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;ATM Cards/Debit Cards</td></tr></tbody></table></a></div></div><div id="childMenuHead"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>Card Services</td></tr></tbody></table></a></div><div id="childMenuContent" style="display: none;"><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;New Card</td></tr></tbody></table></a></div></div><div id="childMenuHead"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>Investment Services</td></tr></tbody></table></a></div><div id="childMenuContent" style="display: none;"><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Plan Your Financial Goals</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Evaluate Alternatives Best &nbsp;&nbsp;&nbsp;Suited To You</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Invest Now</td></tr></tbody></table></a></div></div></div></div><div id="parentMenuHead"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>Contact Us</td></tr></tbody></table></a></div><div id="parentMenuContent" style="display: none;"><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Get in Touch</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Mailbox</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Sent Messages</td></tr></tbody></table></a></div><div id="contentLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>&nbsp;&nbsp;Compose Messages</td></tr></tbody></table></a></div></div><div id="parentMenuHeadLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>Branch &amp; ATM Locations</td></tr></tbody></table></a></div><div class="hr_spacer">&nbsp;</div><hr><div class="hr_spacer">&nbsp;</div><div id="parentMenuHeadLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>Wishlist </td></tr></tbody></table></a></div><div id="parentMenuHeadLink"><a href="#" onclick=""><table cellspacing="0"><tbody><tr><td>SMS Banking</td></tr></tbody></table></a></div></div>  <div id="widgetDiv"></div>   </td> <td class="tbl_header"> <script>
+var cardAvail = false;
+var loanAvail = false;
+
+		cardAvail = false;
+		//
+		loanAvail = false;
+		//
+
+var loadingURL = 'https://forms.online.dummybank.com/public_website/australia/r5paperdrop/common/error.html';
+var formBaseURL = 'https://forms.online.dummybank.com/public_website/australia/r5paperdrop/common/index.html';
+var formErrorURL = 'https://forms.online.dummybank.com/public_website/australia/r5paperdrop/common/loading.html';
+
+var appLabelMap = new Object();
+
+appLabelMap.topupLoan = 'Top-up of Personal Loan';
+appLabelMap.creditLimitIncrease = 'Credit Limit Increase';
+appLabelMap.loanOnCards = 'Loan on Cards';
+appLabelMap.supplementaryCard = 'Supplementary Card';
+
+var appIdMap = new Object();
+appIdMap.topupLoan = 'AUD101';
+appIdMap.notAllCards = 'AUD99';
+appIdMap.allCards = 'AUD98';
+appIdMap.loanOnCards = 'AUD100';
+appIdMap.supplementaryCard = 'AUD97';
+
+
+</script>
+ <script type="text/javascript">
+    function roll_over(img_name, img_src)
+    {
+    	document[img_name].src = img_src;
+    }
+
+</script> <div id="printContent"> <table cellpadding="0" cellspacing="0"> <colgroup> <col width="75%"> <col width="2%" id="ignorePrint_QuickLinksHeader1"> <col width="23%" id="ignorePrint_QuickLinksHeader2"> </colgroup> <tbody><tr> <td colspan="3"> <span class="txt_welcome_title"> Welcome <%= @user.name %>. </span> </td> </tr> <tr> <td class="tbl_sprt_bottom" colspan="3">     You last logged in at <%=@user.last_sign_in_at %> </td> </tr> <tr> <td colspan="3"> <br> </td> </tr> <tr> <td class="tbl_content_top"> <table class="tbl_listing" cellpadding="0" cellspacing="0"> <colgroup> <col width="1%"> <col width="22%"> <col width="19%"> <col width="6%"> <col width="19%" class="tbl_content_right"> <col width="1%"> <col width="18%" class="tbl_content_right"><col width="18%" class="tbl_content_right"> <col width="1%"> <col width="1%"> </colgroup>  <tbody><tr> <th class="tbl_header_left"> <div class="border_left_grey">&nbsp;</div> </th> <th class="tbl_content_left"> Accounts </th> <th class="tbl_content_left"> Account No. </th> <th class="tbl_content_left"> Currency </th> <th class="tbl_content_right"> Available Balance </th> <th class="tbl_content_left"> <span id="tooltip-target-1"></span> <div id="tooltip-content-1"> <p class="txt_tooltip_header"> Available Balance </p> Your available balance is the amount of money in your current or savings account that is currently available to you. Maintaining a positive available balance is important to avoid overdraft or returned item fees. Your available balance reflects cleared or posted transactions and some pending transactions. </div> </th> <th class="tbl_content_right"> Current Balance </th>  <th class="tbl_content_right"> &nbsp;</th><th class="tbl_content_left"> <span id="tooltip-target-2"></span> <div id="tooltip-content-2"> <p class="txt_tooltip_header"> Current Balance </p> Your current balance is the total amount of money that is in your account. Some of this may not be 'available' for withdrawal or transfer due to pending processing (e.g. cheques.) </div> </th> <th class="tbl_header_right"> <div class="border_right_grey">&nbsp;</div> </th> </tr>
+
+  <% @accounts.each do |account| %>
+    <tr class="tbl_listing_row_odd">
+      <td>&nbsp;</td>
+      <td>   Savings Account     </td>
+      <td> <%=account.number %> </td>
+      <td> AUD&nbsp;</td>
+      <td class="tbl_content_right"> <%=account.balance %> </td>
+      <td class="tbl_content_right">&nbsp;</td>
+      <td class="tbl_content_right"> <%=account.balance %> </td>
+      <td class="tbl_cotent_right">
+    <% if(@user.identities.empty?) %>
+      <%= link_to user_omniauth_authorize_path(:twitter) do %>
+         <%= image_tag('twitter.jpeg',  alt: "Register for twitter banking" , height: "20px", width: "20px")%>
+      <% end %>
+    <% end %>
+      </td>
+      <td class="tbl_content_right">&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  <% end %>
+  <tr class="tbl_listing_end"> <td colspan="8">&nbsp;</td> <td>&nbsp;</td> </tr>     </tbody></table>   <table cellpadding="0" cellspacing="0"> <colgroup> <col width="1%"> <col width="98%"> <col width="1%"> </colgroup>  <tbody><tr> <td>&nbsp;</td> <td class="tbl_content_right"> <br>  </td> <td>&nbsp;</td> </tr>  </tbody></table> <div id="ignorePrint_ad2"></div> <br> <div> Note:
+           			<ol style="1" class="note_info"> <li> The account / consolidated balances displayed above are for the accounts that are authorised for your access and are not a reflection of the ownership of the funds therein. </li> <li> Exchange rates used for conversion of foreign currency balances to AUD balance or equivalent value are indicative only. Should you require the exact conversion rate, please contact your Relationship Manager or Branch. </li> <li> If you have any queries, please <a href="#">email us</a> or call<a href="#"> Phone Banking</a>. </li> </ol> </div> </td> <td id="ignorePrint_QuickLinks1">&nbsp;</td> <td id="ignorePrint_QuickLinks2" class="tbl_content_top">
+           			<script>
+var cardAvail = false;
+var loanAvail = false;
+
+		cardAvail = false;
+		//
+		loanAvail = false;
+		//
+
+var loadingURL = 'https://forms.online.dummybank.com/public_website/australia/r5paperdrop/common/error.html';
+var formBaseURL = 'https://forms.online.dummybank.com/public_website/australia/r5paperdrop/common/index.html';
+var formErrorURL = 'https://forms.online.dummybank.com/public_website/australia/r5paperdrop/common/loading.html';
+
+var appLabelMap = new Object();
+
+appLabelMap.topupLoan = 'Top-up of Personal Loan';
+appLabelMap.creditLimitIncrease = 'Credit Limit Increase';
+appLabelMap.loanOnCards = 'Loan on Cards';
+appLabelMap.supplementaryCard = 'Supplementary Card';
+
+var appIdMap = new Object();
+appIdMap.topupLoan = 'AUD101';
+appIdMap.notAllCards = 'AUD99';
+appIdMap.allCards = 'AUD98';
+appIdMap.loanOnCards = 'AUD100';
+appIdMap.supplementaryCard = 'AUD97';
+
+
+</script>
+     <table class="dummy_green" cellpadding="0" cellspacing="0">    <colgroup> <col width="1%"> <col width="98%"> <col width="1%"> </colgroup> <tbody><tr> <th class="tbl_header_left"> <div class="border_left_blue">&nbsp;</div> </th> <th> Quick Links </th> <th class="tbl_header_right"> <div class="border_right_blue">&nbsp;</div> </th> </tr>        <tr> <td colspan="3" class="tbl_list_info"> <a href="#">    <ul class="quicklinkList"> <li> Pay Bills </li> </ul>   </a> </td> </tr>   <tr> <td colspan="3" class="tbl_list_info"> <a href="#">    <ul class="quicklinkList"> <li> Apply For eStatement </li> </ul>   </a> </td> </tr>   <tr> <td colspan="3" class="tbl_list_info"> <a href="#">    <ul class="quicklinkList"> <li> Register For Mobile Banking </li> </ul>   </a> </td> </tr>   <tr> <td colspan="3" class="tbl_list_info"> <a href="#">    <ul class="quicklinkList"> <li> Transfer Funds </li> </ul>   </a> </td> </tr>   <tr> <td colspan="3" class="tbl_list_info"> <a href="#">    <ul class="quicklinkList"> <li> Request For Cheque Book </li> </ul>   </a> </td> </tr>    <tr class="tbl_info_blue_bottom"> <td colspan="100%"> <b class="blue_border"> <b class="blue_border4"> </b> <b class="blue_border3"> </b> <b class="blue_border2"> <b> </b> </b> <b class="blue_border1"> <b> </b> </b> </b> </td> </tr>  </tbody></table> <br>                                                <script>
+var cardAvail = false;
+var loanAvail = false;
+
+		cardAvail = false;
+		//
+		loanAvail = false;
+		//
+
+var loadingURL = 'https://forms.online.dummybank.com/public_website/australia/r5paperdrop/common/error.html';
+var formBaseURL = 'https://forms.online.dummybank.com/public_website/australia/r5paperdrop/common/index.html';
+var formErrorURL = 'https://forms.online.dummybank.com/public_website/australia/r5paperdrop/common/loading.html';
+
+var appLabelMap = new Object();
+
+appLabelMap.topupLoan = 'Top-up of Personal Loan';
+appLabelMap.creditLimitIncrease = 'Credit Limit Increase';
+appLabelMap.loanOnCards = 'Loan on Cards';
+appLabelMap.supplementaryCard = 'Supplementary Card';
+
+var appIdMap = new Object();
+appIdMap.topupLoan = 'AUD101';
+appIdMap.notAllCards = 'AUD99';
+appIdMap.allCards = 'AUD98';
+appIdMap.loanOnCards = 'AUD100';
+appIdMap.supplementaryCard = 'AUD97';
+
+
+</script>
+          <br>                                                <script>
+var cardAvail = false;
+var loanAvail = false;
+
+		cardAvail = false;
+		//
+		loanAvail = false;
+		//
+
+var loadingURL = 'https://forms.online.dummybank.com/public_website/australia/r5paperdrop/common/error.html';
+var formBaseURL = 'https://forms.online.dummybank.com/public_website/australia/r5paperdrop/common/index.html';
+var formErrorURL = 'https://forms.online.dummybank.com/public_website/australia/r5paperdrop/common/loading.html';
+
+var appLabelMap = new Object();
+
+appLabelMap.topupLoan = 'Top-up of Personal Loan';
+appLabelMap.creditLimitIncrease = 'Credit Limit Increase';
+appLabelMap.loanOnCards = 'Loan on Cards';
+appLabelMap.supplementaryCard = 'Supplementary Card';
+
+var appIdMap = new Object();
+appIdMap.topupLoan = 'AUD101';
+appIdMap.notAllCards = 'AUD99';
+appIdMap.allCards = 'AUD98';
+appIdMap.loanOnCards = 'AUD100';
+appIdMap.supplementaryCard = 'AUD97';
+
+
+</script>
+          <br>                                                <script>
+var cardAvail = false;
+var loanAvail = false;
+
+		cardAvail = false;
+		//
+		loanAvail = false;
+		//
+
+var loadingURL = 'https://forms.online.dummybank.com/public_website/australia/r5paperdrop/common/error.html';
+var formBaseURL = 'https://forms.online.dummybank.com/public_website/australia/r5paperdrop/common/index.html';
+var formErrorURL = 'https://forms.online.dummybank.com/public_website/australia/r5paperdrop/common/loading.html';
+
+var appLabelMap = new Object();
+
+appLabelMap.topupLoan = 'Top-up of Personal Loan';
+appLabelMap.creditLimitIncrease = 'Credit Limit Increase';
+appLabelMap.loanOnCards = 'Loan on Cards';
+appLabelMap.supplementaryCard = 'Supplementary Card';
+
+var appIdMap = new Object();
+appIdMap.topupLoan = 'AUD101';
+appIdMap.notAllCards = 'AUD99';
+appIdMap.allCards = 'AUD98';
+appIdMap.loanOnCards = 'AUD100';
+appIdMap.supplementaryCard = 'AUD97';
+
+
+</script>
+<script>
+var cardAvail = false;
+var loanAvail = false;
+
+		cardAvail = false;
+		//
+		loanAvail = false;
+		//
+
+var loadingURL = 'https://forms.online.dummybank.com/public_website/australia/r5paperdrop/common/error.html';
+var formBaseURL = 'https://forms.online.dummybank.com/public_website/australia/r5paperdrop/common/index.html';
+var formErrorURL = 'https://forms.online.dummybank.com/public_website/australia/r5paperdrop/common/loading.html';
+
+var appLabelMap = new Object();
+
+appLabelMap.topupLoan = 'Top-up of Personal Loan';
+appLabelMap.creditLimitIncrease = 'Credit Limit Increase';
+appLabelMap.loanOnCards = 'Loan on Cards';
+appLabelMap.supplementaryCard = 'Supplementary Card';
+
+var appIdMap = new Object();
+appIdMap.topupLoan = 'AUD101';
+appIdMap.notAllCards = 'AUD99';
+appIdMap.allCards = 'AUD98';
+appIdMap.loanOnCards = 'AUD100';
+appIdMap.supplementaryCard = 'AUD97';
+
+
+</script>
+</body></html>

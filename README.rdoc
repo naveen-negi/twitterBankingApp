@@ -1,0 +1,10 @@
+== README
+
+Banking application POC, which will allow user to register for Twitter banking and will also respond to the basic account queries (such as account balance) via Twitters DM.
+
+Contributors:
+
+* Naveen Negi
+* Shubham Jain
+* Kuldeep Ghogre
+* Anantpal Singh
